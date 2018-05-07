@@ -70,7 +70,6 @@ public class DbManager implements IAuthenticationConstants {
                 login.setLastName(rs.getString(LAST_NAME));
                 login.setMobile(rs.getString(MOBILE));
             }
-
             return login;
         } catch (Exception e) {
             return null;
