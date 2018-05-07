@@ -15,7 +15,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Abhi
+ * @author Abhilash
  */
 public class DbManager implements IAuthenticationConstants {
 
