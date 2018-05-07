@@ -51,7 +51,8 @@ public class DbManager implements IAuthenticationConstants {
             }
         }
     }
-    public AuthenticationDto getLoginDetails(String loginId, String password) throws SQLException{        
+
+    public AuthenticationDto getLoginDetails(String loginId, String password) throws SQLException {
         con = ConnectionManager.getConnection();
         stmt = con.createStatement();
         AuthenticationDto login = new AuthenticationDto();
@@ -59,9 +60,9 @@ public class DbManager implements IAuthenticationConstants {
         try {
             query = "SELECT " + FIRST_NAME + ","
                     + " " + LAST_NAME + ","
-                    + " " + MOBILE 
+                    + " " + MOBILE
                     + " " + " FROM " + LOGIN
-                     + " " + " WHERE " + EMAIL + " = " + "'" + loginId + "'"
+                    + " " + " WHERE " + EMAIL + " = " + "'" + loginId + "'"
                     + " " + " AND " + PASSWORD + " = " + "'" + password + "'";
             rs = stmt.executeQuery(query);
             if (rs.next()) {
@@ -69,11 +70,11 @@ public class DbManager implements IAuthenticationConstants {
                 login.setLastName(rs.getString(LAST_NAME));
                 login.setMobile(rs.getString(MOBILE));
             }
-            
+
             return login;
         } catch (Exception e) {
             return null;
-        }finally {
+        } finally {
             if (con != null) {
                 try {
                     con.close();
@@ -82,18 +83,18 @@ public class DbManager implements IAuthenticationConstants {
             }
         }
     }
-    
-public boolean registerUser(AuthenticationDto register) throws SQLException {
+
+    public boolean registerUser(AuthenticationDto register) throws SQLException {
         con = ConnectionManager.getConnection();
         stmt = con.createStatement();
         try {
-        String query = "INSERT INTO " + LOGIN
-                + " " + "SET"
-                + " " + FIRST_NAME + "= " + "'" + register.getFirstName()+ "'" + ","
-                + " " + LAST_NAME + "= " + "'" + register.getLastName()+ "'" + ","
-                + " " + MOBILE + "= " + "'" + register.getMobile()+ "'" + ","
-                + " " + EMAIL + "= " + "'" + register.getEmail()+ "'" + ","
-                + " " + PASSWORD + "= " + "'" + register.getPassword() + "'" ;
+            String query = "INSERT INTO " + LOGIN
+                    + " " + "SET"
+                    + " " + FIRST_NAME + "= " + "'" + register.getFirstName() + "'" + ","
+                    + " " + LAST_NAME + "= " + "'" + register.getLastName() + "'" + ","
+                    + " " + MOBILE + "= " + "'" + register.getMobile() + "'" + ","
+                    + " " + EMAIL + "= " + "'" + register.getEmail() + "'" + ","
+                    + " " + PASSWORD + "= " + "'" + register.getPassword() + "'";
             System.out.println(query);
             int result = stmt.executeUpdate(query);
             if (result > 0) {
@@ -104,7 +105,7 @@ public boolean registerUser(AuthenticationDto register) throws SQLException {
         }//if any exception occurs, return false
         catch (Exception e) {
             return false;
-        }finally {
+        } finally {
             if (con != null) {
                 try {
                     con.close();
