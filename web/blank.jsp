@@ -264,20 +264,22 @@
                        <li> <a class="has-arrow  " href="#" aria-expanded="false">
                                <i class="fa fa-tachometer"></i>
                                <span class="hide-menu">Dashboard <span class="label label-rouded label-primary pull-right">2</span></span></a>
+                               <!--<span class="hide-menu">Admin<span class="label label-rouded label-primary pull-right">2</span></span></a>-->
 <!--                            <ul aria-expanded="false" class="collapse">
                                 <li><a href="index.html">Ecommerce </a></li>
                                 <li><a href="index1.html">Analytics </a></li>
                             </ul>-->
                         </li> <!---->
-<!--                        <li class="nav-label">Apps</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Email</span></a>
-                            <ul aria-expanded="false" class="collapse">
+                    
+                        <li> <a  href="admin.html" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Admin</span></a>
+<!--                            <ul aria-expanded="false" class="collapse">
                                 <li><a href="email-compose.html">Compose</a></li>
                                 <li><a href="email-read.html">Read</a></li>
                                 <li><a href="email-inbox.html">Inbox</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Charts</span></a>
+                         <!--  <li class="nav-label">Admin</li>
+                      <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Charts</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="chart-flot.html">Flot</a></li>
                                 <li><a href="chart-morris.html">Morris</a></li>
